@@ -17,28 +17,28 @@ public class LojaController {
     LojaRepository lojaRepository;
 
     @GetMapping("/lojas")
-    public List<Loja> listaLojas(){
+    public List<Loja> listaLojas() {
         return lojaRepository.findAll();
     }
 
     @GetMapping("lojas/{id}")
-    public Optional listLojaUnica(@PathVariable(value = "id") long id){
+    public Optional listLojaUnica(@PathVariable(value = "id") long id) {
         return lojaRepository.findById(id);
     }
 
     @PostMapping("/lojas")
-    public Loja salvaProduto(@RequestBody Loja loja){
-        return  lojaRepository.save(loja);
+    public Loja salvaProduto(@RequestBody Loja loja) {
+        return lojaRepository.save(loja);
     }
 
     @DeleteMapping("/lojas/{id}")
-    public void deletaLoja(@PathVariable(value = "id") long id){
+    public void deletaLoja(@PathVariable(value = "id") long id) {
         lojaRepository.deleteById(id);
     }
 
     @PutMapping("/lojas/{id}")
-    public Loja atualizaProduto(@PathVariable(value = "id")@RequestBody Loja loja ){
-        return  lojaRepository.save(loja);
+    public Loja atualizaProduto(@PathVariable(value = "id") @RequestBody Loja loja) {
+        return lojaRepository.save(loja);
 
     }
 }

@@ -3,6 +3,7 @@ package com.produtos.apirest.repository;
 import com.produtos.apirest.models.Produto;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
